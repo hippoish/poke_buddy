@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   patch '/pokemons/:id' => 'pokemons#choose_pokemon', as: :choose_pokemon
 
-  # patch '/users/index.html' => choose
+  patch '/users/index.html' => 'users#choose_buddy', as: :choose_buddy
+
+  get '/users/:id/match' => 'users#users_match', as: :users_match
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
