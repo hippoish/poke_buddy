@@ -61,6 +61,11 @@ class PokemonsController < ApplicationController
     end
   end
 
+  def choose_pokemon
+    # create a new entry in the PokemonsUsers table that references current_user and @pokemon
+    @pokemon.users << current_user
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pokemon
